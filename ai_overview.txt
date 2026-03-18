@@ -1,0 +1,7 @@
+AI and Machine Learning Overview
+
+Artificial Intelligence (AI) is a branch of computer science that aims to create systems capable of performing tasks that typically require human intelligence. These tasks include learning, reasoning, problem-solving, perception, and language understanding.
+
+Machine Learning (ML) is a subset of AI that focuses on the development of algorithms that allow computers to learn from and make predictions or decisions based on data. Instead of being explicitly programmed to perform a specific task, ML models are trained on large datasets to identify patterns and relationships.
+
+Common applications of AI and ML include natural language processing (NLP), computer vision, recommendation systems, and autonomous vehicles. As data becomes more abundant and computing power increases, the impact of AI on various industries, from healthcare to finance, continues to grow significantly.

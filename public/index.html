@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Study Assistant | Powered by Endee</title>
+    <!-- Use Outfit font for a premium, modern feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <span class="logo">✦</span>
+            <h1>AI Study Assistant</h1>
+        </div>
+        <p class="subtitle">Intelligent Semantic Search with <span class="highlight">Endee Vector DB</span></p>
+    </header>
+
+    <main class="container">
+        <!-- File Upload Section -->
+        <section class="card upload-card animate-in">
+            <div class="card-header">
+                <h2>1. Upload Content</h2>
+                <p>Upload a .txt file to populate the Endee vector database with embeddings.</p>
+            </div>
+            <div class="upload-area" id="upload-area">
+                <input type="file" id="file-input" accept=".txt" hidden>
+                <div class="upload-placeholder" onclick="document.getElementById('file-input').click()">
+                    <span class="icon">📁</span>
+                    <span>Click to choose file or drag and drop</span>
+                </div>
+                <div id="file-name" class="file-info"></div>
+                <button id="upload-btn" class="btn primary-btn" disabled>Populate Endee</button>
+            </div>
+            <div id="upload-status" class="status-message"></div>
+        </section>
+
+        <!-- Search Query Section -->
+        <section class="card query-card animate-in" style="animation-delay: 0.1s;">
+            <div class="card-header">
+                <h2>2. Ask the Assistant</h2>
+                <p>Query your document using semantic similarity search via Endee's query engine.</p>
+            </div>
+            <div class="input-group">
+                <input type="text" id="query-input" placeholder="Ask anything about the uploaded document..." autocomplete="off">
+                <button id="query-btn" class="btn secondary-btn">Query Endee</button>
+            </div>
+            <div id="loading" class="loading-container hidden">
+                <div class="spinner"></div>
+                <span>Searching Endee vector space...</span>
+            </div>
+            <div id="answer-container" class="answer-box hidden">
+                <h3>Similarity Search Results:</h3>
+                <div id="answer-text"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AI Study Assistant. Built with Endee Vector Database.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

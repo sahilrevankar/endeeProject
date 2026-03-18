@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASSTnt_v2.0 | INTEL_QUERY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid-overlay"></div>
+    <div class="noise-overlay"></div>
+    
+    <header class="sys-header">
+        <div class="logo-container">
+            <span class="logo-mark">[✦]</span>
+            <h1>ASSTnt_v2.0</h1>
+        </div>
+        <div class="header-divider"></div>
+        <div class="subtitle">
+            <span class="label">MODULE:</span> SEMANTIC_SEARCH_ENG
+            <span class="label">KERNEL:</span> <span class="highlight">ENDEE_V_DB</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- File Upload Section -->
+        <section class="card upload-card animate-in delay-1">
+            <div class="card-header">
+                <div class="sys-badge">SYS.01</div>
+                <h2>DATA_INGESTION</h2>
+                <p class="desc">Mount knowledge payload (.txt) to initialize embedding vectors.</p>
+            </div>
+            
+            <div class="upload-area" id="upload-area">
+                <input type="file" id="file-input" accept=".txt" hidden>
+                <div class="upload-placeholder" onclick="document.getElementById('file-input').click()">
+                    <div class="bracket-t-l"></div>
+                    <div class="bracket-t-r"></div>
+                    <div class="bracket-b-l"></div>
+                    <div class="bracket-b-r"></div>
+                    <div class="upload-content">
+                        <span class="icon glitch-effect" data-text="[+]">[+]</span>
+                        <span class="main-text">INITIALIZE DATALINK</span>
+                        <span class="sub-text">SELECT OR DRAG FILE</span>
+                    </div>
+                </div>
+                <div id="file-name" class="file-info label"></div>
+                <button id="upload-btn" class="btn primary-btn" disabled>
+                    <span class="btn-text">EXECUTE: POPULATE_DB</span>
+                </button>
+            </div>
+            <div id="upload-status" class="status-message"></div>
+        </section>
+
+        <!-- Search Query Section -->
+        <section class="card query-card animate-in delay-2">
+            <div class="card-header">
+                <div class="sys-badge">SYS.02</div>
+                <h2>QUERY_INTERFACE</h2>
+                <p class="desc">Awaiting linguistic input matching embedded vectors.</p>
+            </div>
+            
+            <div class="input-group">
+                <div class="input-wrapper">
+                    <span class="prompt-carat">></span>
+                    <input type="text" id="query-input" placeholder="INPUT SYNTAX QUERY..." autocomplete="off">
+                </div>
+                <button id="query-btn" class="btn secondary-btn">
+                    <span class="btn-text">SCAN_VECTOR_SPACE</span>
+                </button>
+            </div>
+            
+            <div id="loading" class="loading-container hidden">
+                <div class="technical-spinner"></div>
+                <span class="blink">PROCESSING_SEARCH_ALGORITHM...</span>
+            </div>
+            
+            <div id="answer-container" class="answer-box hidden">
+                <div class="answer-header">
+                    <h3>OUTPUT_STREAM</h3>
+                    <span class="status-ok">[OK]</span>
+                </div>
+                <div id="answer-text" class="terminal-output"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-line"></div>
+        <p>SECURE_COMMS // &copy; 2026 // ENDEE_PROTOCOL_ACTIVE</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
